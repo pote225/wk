@@ -23,4 +23,10 @@ public class EmployeeController {
         Collection<Employee> employees = employeeService.findAll();
         return new ResponseEntity<Collection<Employee>>(employees, HttpStatus.OK);
     }
+
+    @RequestMapping(value = "api/employee", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Collection<Employee>> getEmployees() {
+        Collection<Employee> employees = employeeService.findAll();
+        return new ResponseEntity<Collection<Employee>>(employees, HttpStatus.OK);
+    }
 }
